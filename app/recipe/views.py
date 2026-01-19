@@ -115,8 +115,8 @@ class BaseRecipeAttrViewSet(mixins.DestroyModelMixin,
                             mixins.ListModelMixin,
                             viewsets.GenericViewSet):
     """Base ViewSet for recipe attributes"""
-    authentication_classes = [TokenAuthentication,]
-    permission_classes = [IsAuthenticated,]
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         """Return tags for the authenticated user only."""
