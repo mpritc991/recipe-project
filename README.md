@@ -1,25 +1,46 @@
-# recipe-project
+# Recipe Project API
 
-A production-style API built to demonstrate modern backend development practices.
+A production-style Django REST Framework API built to demonstrate modern backend development practices, including authentication, relational data modeling, filtering, automated testing, and containerized workflows.
 
-## Deployment
+This project implements a complete recipe management API with support for users, recipes, tags, ingredients, image uploads, and query-based filtering. The focus is on clean architecture, test coverage, and deployment readiness.
 
-This application is designed to be deployable to AWS (e.g., EC2 or ECS), but cloud infrastructure and secrets are intentionally excluded from this repository.
+## Overview
 
-The codebase is deployment-ready and environment-agnostic. All environment-specific configuration, including credentials, database URLs, and secret keys, is injected at runtime via environment variables.
+The goal of this project is to showcase backend engineering skills through a realistic, production-oriented API. Emphasis is placed on maintainability, correctness, and portability across environments rather than UI or frontend concerns.
+
+The application is designed to be environment-agnostic and suitable for deployment in a containerized cloud environment.
+
+## Key Features
+
+- Token-based authentication and per-user data isolation
+- CRUD operations for recipes, tags, and ingredients
+- Many-to-many relationships with query-parameter filtering
+- Image upload handling for recipe objects
+- Reusable base viewsets to reduce duplication
+- Comprehensive automated test suite
+- OpenAPI schema documentation using drf-spectacular
+
+## Tech Stack
+
+- Python
+- Django
+- Django REST Framework
+- PostgreSQL
+- Docker and Docker Compose
+- drf-spectacular
+- pytest
 
 ## Containerization
 
-The application is fully containerized and developed using Docker and Docker Compose.
+The application is fully containerized using Docker and Docker Compose.
 
 Docker Compose is used for local development and testing, providing a consistent environment across machines. Services are configured via environment variables, allowing the same containers to be used across development, staging, and production environments with minimal changes.
 
-### Services
-- Web API
-- Database
-- Supporting services as required
+## Deployment
 
-The Docker configuration is intentionally environment-agnostic and can be adapted for production orchestration (e.g., ECS or Kubernetes) without modifying application code.
+This application is designed to be deployable to cloud infrastructure such as AWS (e.g., EC2 or ECS), but cloud resources and secrets are intentionally excluded from this repository.
+
+The codebase is deployment-ready and environment-agnostic. All environment-specific configuration, including credentials, database URLs, and secret keys, is injected at runtime via environment variables.
 
 ## Production Considerations
 
