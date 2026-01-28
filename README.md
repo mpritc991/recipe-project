@@ -2,7 +2,7 @@
 
 **Recipe Project — Recruiter-Friendly REST API**
 
-### Explore a working backend API with zero setup — just Docker Desktop required
+## Explore a working backend API with zero setup — just Docker Desktop required
 
 This is a backend REST API built with **Django & Django REST Framework**, designed to be **easy for recruiters and hiring managers to explore**, while also showcasing modern backend practices for technical reviewers.
 
@@ -11,18 +11,18 @@ This is a backend REST API built with **Django & Django REST Framework**, design
 
 ---
 
-### Why You Should Hire Me
+# Why You Should Hire Me
 
-# This project demonstrates exactly how I think, structure systems, and ship maintainable backend code with:
+### This project demonstrates exactly how I think, structure systems, and ship maintainable backend code with:
 - Clear modular architecture for scalable backend systems Secure authentication & permissions management
 - Dockerized development for reproducibility & team onboarding
 - TDD with high test coverage to ensure reliability
 - CI/CD integration to automate quality and deployment
 - PostgreSQL integration showing real-world database handling
 
-# By exploring this repository, recruiters and technical reviewers can see hands-on evidence of my backend engineering skills, not just a resume.
+### By exploring this repository, recruiters and technical reviewers can see hands-on demonstration I have building backend systems, something more than just a resume.
 
-### 📬 Contact & Hiring Info
+## 📬 Contact & Hiring Info
 
 I am currently seeking:
 - Remote full-time backend or software engineering roles
