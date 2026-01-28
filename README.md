@@ -1,61 +1,66 @@
-# Recipe Project API
+# Recruiter REST API
 
-A production-style Django REST Framework API built to demonstrate modern backend development practices, including authentication, relational data modeling, filtering, automated testing, and containerized workflows.
+**Recipe Project — Recruiter-Friendly REST API**
 
-This project implements a complete recipe management API with support for users, recipes, tags, ingredients, image uploads, and query-based filtering. The focus is on clean architecture, test coverage, and deployment readiness.
+### Explore a working backend API with zero setup — just Docker Desktop required
 
-## Overview
+This is a backend REST API built with **Django & Django REST Framework**, designed to be **easy for recruiters and hiring managers to explore**, while also showcasing modern backend practices for technical reviewers.
 
-The goal of this project is to showcase backend engineering skills through a realistic, production-oriented API. Emphasis is placed on maintainability, correctness, and portability across environments rather than UI or frontend concerns.
+- **Non-technical viewers:** See endpoints in action, explore the admin panel, and get a sense of how I structure backend systems.
+- **Technical reviewers:** Demonstrates containerization with Docker, secure JWT authentication, modular architecture, PostgreSQL integration, Test-Driven Development (TDD), and CI/CD with GitHub Actions.
 
-The application is designed to be environment-agnostic and suitable for deployment in a containerized cloud environment.
+---
 
-## Key Features
+### Why You Should Hire Me
 
-- Token-based authentication and per-user data isolation
-- CRUD operations for recipes, tags, and ingredients
-- Many-to-many relationships with query-parameter filtering
-- Image upload handling for recipe objects
-- Reusable base viewsets to reduce duplication
-- Comprehensive automated test suite
-- OpenAPI schema documentation using drf-spectacular
+# This project demonstrates exactly how I think, structure systems, and ship maintainable backend code with:
+- Clear modular architecture for scalable backend systems Secure authentication & permissions management
+- Dockerized development for reproducibility & team onboarding
+- TDD with high test coverage to ensure reliability
+- CI/CD integration to automate quality and deployment
+- PostgreSQL integration showing real-world database handling
 
-## Tech Stack
+# By exploring this repository, recruiters and technical reviewers can see hands-on evidence of my backend engineering skills, not just a resume.
 
-- Python
-- Django
-- Django REST Framework
-- PostgreSQL
-- Docker and Docker Compose
-- drf-spectacular
-- pytest
+### 📬 Contact & Hiring Info
 
-## Containerization
+I am currently seeking:
+- Remote full-time backend or software engineering roles
+- Contract or contract-to-hire opportunities
+- Email: mattpritchard405 [at] gmail [dot] com
 
-The application is fully containerized using Docker and Docker Compose.
+---
 
-Docker Compose is used for local development and testing, providing a consistent environment across machines. Services are configured via environment variables, allowing the same containers to be used across development, staging, and production environments with minimal changes.
+## 🚀 Key Features
 
-## Deployment
+- Full CRUD API for recipes, ingredients, tags, and users
+- JWT authentication with secure object-level permissions
+- Image uploads, nested serializers, filtering, sorting, and searching
+- Dockerized development & production environments
+- PostgreSQL database configuration
+- GitHub Actions CI/CD: automatic tests and linting
+- TDD approach with high test coverage
 
-This application is designed to be deployable to cloud infrastructure such as AWS (e.g., EC2 or ECS), but cloud resources and secrets are intentionally excluded from this repository.
+---
 
-The codebase is deployment-ready and environment-agnostic. All environment-specific configuration, including credentials, database URLs, and secret keys, is injected at runtime via environment variables.
+## 🛠 Quick Start (5 Minutes)
 
-## Production Considerations
+**Goal:** Let anyone explore the project without needing Python setup. Just use Docker.
 
-- Environment variables are expected to be configured externally
-- Secrets are never committed to source control
-- Static assets and media storage should be configured per environment
-- Infrastructure concerns are intentionally decoupled from application code
-
-This separation ensures the repository remains clean, secure, and portable across environments.
-
-## Environment Variables
-
-Environment-specific configuration is managed via environment variables.
-
-A sample configuration file is provided:
+**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop) installed.
 
 ```bash
-cp env.sample .env
+# 1. Clone the project
+git clone https://github.com/mpritc991/recipe-project.git
+cd recipe-project
+
+# 2. Start the stack (Database + API)
+docker compose up --build
+
+# 3. Create Admin user
+docker compose run app python manage.py createsuperuser
+
+# 4. Access the project
+# API: http://localhost:8000
+# Docs: http://localhost:8000/api/docs/ (Authorize with JWT: prefix token with "Token ")
+# Admin: http://localhost:8000/admin
